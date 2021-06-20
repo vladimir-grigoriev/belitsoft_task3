@@ -13,6 +13,8 @@ class TestPage8(unittest.TestCase):
         self.driver.quit()
 
     def test_button_text_changes_after_pressing_the_button(self):
+        """Ensure entering text into an edit field have effect"""
+
         self.page = Page8(self.driver)
         self.page.go_to_site()
         self.page.go_to_page()

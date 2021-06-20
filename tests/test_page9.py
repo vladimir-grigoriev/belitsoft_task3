@@ -13,6 +13,8 @@ class TestPage8(unittest.TestCase):
         self.driver.quit()
 
     def test_user_can_see_scrolled_button(self):
+        """Ensure scrolling an element into view is possible"""
+
         self.page = Page9(self.driver)
         self.page.go_to_site()
         self.page.go_to_page()

@@ -13,6 +13,8 @@ class TestPage4(unittest.TestCase):
         self.driver.quit()
 
     def test_can_see_the_page_after_long_delay(self):
+        """Ensure that a test is capable of waiting for a page to load"""
+
         self.page = Page4(self.driver)
         self.page.go_to_site()
         self.page.go_to_page()

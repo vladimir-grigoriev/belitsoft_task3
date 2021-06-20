@@ -13,6 +13,9 @@ class TestPage6(unittest.TestCase):
         self.driver.quit()
 
     def test_user_can_see_the_delayed_data(self):
+        """Check elements appeared after client-side time consuming
+        JavaScript calculations"""
+
         self.page = Page6(self.driver)
         self.page.go_to_site()
         self.page.go_to_page()

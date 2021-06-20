@@ -13,6 +13,8 @@ class TestPage7(unittest.TestCase):
         self.driver.quit()
 
     def test_button_changes_color_to_green_after_clicking(self):
+        """Ensure event based click on an element works"""
+
         self.page = Page7(self.driver)
         self.page.go_to_site()
         self.page.go_to_page()

@@ -14,6 +14,9 @@ class TestPage3(unittest.TestCase):
         self.driver.quit()
 
     def test_user_cant_press_green_button_again(self):
+        """Verify that your test does not interact with elements invisible
+        because of z-order"""
+
         self.page = Page3(self.driver)
         self.page.go_to_site()
         self.page.go_to_page()
