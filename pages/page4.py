@@ -24,11 +24,11 @@ class Page4(BasePage):
     def go_to_page(self):
         """Clicking the page link"""
 
-        link = self.find_element(Page4Locators.LINK)
-        link.click()
+        self.click_element(Page4Locators.LINK)
+        # link.click()
 
     def press_the_button(self):
         """Finding and pressing definite button"""
 
-        button = self.find_element(Page4Locators.BUTTON)
-        button.click()
+        self.click_element(Page4Locators.BUTTON)
+        # button.click()

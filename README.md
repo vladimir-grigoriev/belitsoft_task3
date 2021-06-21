@@ -3,6 +3,17 @@
 1. Tests for UI Playground are located in tests/ folder
 2. Screenshots of the second task with postman and newman and the fourth task from the test challenge are attached below in the Readme.md, also they can be downloaded from img/ folder
 ___
+Last updates (June 21, 2021):
+1. Added pytest-xdist and nosetests-parallel to run tests in multiprocess
+2. To run tests in multiprocess, run commands:
+```
+pytest -n auto
+```
+or
+```
+nosetests --processes=4
+```
+___
 ## How to install
 
 
