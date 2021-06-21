@@ -12,8 +12,8 @@ class TestPage11(unittest.TestCase):
     def tearDown(self) -> None:
         self.driver.quit()
 
-    def test_user_can_see_scrolled_button(self):
-        """Ensure scrolling an element into view is possible"""
+    def test_field_with_definite_value_is_reachable(self):
+        """ finds an element with 'Welcome...' text"""
 
         self.page = Page11(self.driver)
         self.page.go_to_site()

@@ -5,15 +5,15 @@ from selenium import webdriver
 from pages.page10 import Page10
 
 
-class TestPage8(unittest.TestCase):
+class TestPage10(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = webdriver.Chrome()
 
     def tearDown(self) -> None:
         self.driver.quit()
 
-    def test_user_can_see_scrolled_button(self):
-        """Ensure scrolling an element into view is possible"""
+    def test_google_cpu_from_table_matches_cpu_from_reference_field(self):
+        """Matching chrome CPU values from dynamic table"""
 
         self.page = Page10(self.driver)
         self.page.go_to_site()

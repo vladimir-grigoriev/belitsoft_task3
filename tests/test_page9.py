@@ -5,7 +5,7 @@ from selenium import webdriver
 from pages.page9 import Page9
 
 
-class TestPage8(unittest.TestCase):
+class TestPage9(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = webdriver.Chrome()
 
