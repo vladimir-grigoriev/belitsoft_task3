@@ -20,12 +20,12 @@ class BasePage:
 
         return self.driver.get(self.base_url)
 
-    def click_element(self, locator):
+    def click_element(self, locator, timeout=20):
         """Common method to find and click definite element in browser"""
 
         time.sleep(0.5)
         return (
-            WebDriverWait(self.driver, 20)
+            WebDriverWait(self.driver, timeout)
             .until(EC.element_to_be_clickable(locator), message="Nope")
             .click()
         )
@@ -50,6 +50,8 @@ class BasePage:
         )
 
     def find_elements(self, locator, timeout=20):
+        """Common method to find all matches element in browser"""
+
         time.sleep(0.5)
         return WebDriverWait(self.driver, timeout).until(
             EC.presence_of_all_elements_located(locator),
