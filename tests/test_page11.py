@@ -3,11 +3,15 @@ import unittest
 from selenium import webdriver
 
 from pages.page11 import Page11
+from .config import capabilities, link
 
 
 class TestPage11(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Remote(
+        #     command_executor=link,
+        #     desired_capabilities=capabilities)
 
     def tearDown(self) -> None:
         self.driver.quit()
