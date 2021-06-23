@@ -7,13 +7,13 @@ from .config import capabilities, link, driver_chrome
 
 
 class TestPage2(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.Remote(
         #     command_executor=link,
         #     desired_capabilities=capabilities)
 
-    def tearDown(self) -> None:
+    def tearDown(self):
         self.driver.quit()
 
     def test_user_can_see_alert_window(self):
