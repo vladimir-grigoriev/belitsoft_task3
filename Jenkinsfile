@@ -19,7 +19,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m unittest tests/test_page2.py' 
+                sh 'pytest tests/test_page2.py' 
             }
             post {
                 always {
