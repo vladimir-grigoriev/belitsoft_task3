@@ -3,7 +3,6 @@ import unittest
 from selenium import webdriver
 
 from pages.page2 import Page2
-from .config import capabilities, link, driver_chrome
 
 
 class TestPage2(unittest.TestCase):
@@ -28,6 +27,3 @@ class TestPage2(unittest.TestCase):
             alertion_text, "Primary button pressed", "message didn't matches"
         )
         self.page.close_the_alert_window(alert)
-
-if __name__ == '__main__':
-    unittest.main()
