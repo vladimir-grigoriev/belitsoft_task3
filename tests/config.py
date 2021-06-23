@@ -24,5 +24,5 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.binary_location = binary_location
 
 driver = webdriver.Chrome(
-    executable_path=driver_location, chrome_options=chrome_options
+    executable_path=driver_location, options=chrome_options
 )
