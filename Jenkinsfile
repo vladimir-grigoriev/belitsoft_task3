@@ -8,7 +8,9 @@ pipeline {
                 }
             }
             steps {
-                sh 'pip3 install -r requirements.txt'
+                sh 'python3 -m venv env'
+                sh 'source ./env/bin/activate '
+                sh 'pip install -r requirements.txt'
             }
         }
         stage('Test') { 
