@@ -3,11 +3,12 @@ import unittest
 from selenium import webdriver
 
 from pages.page9 import Page9
+from .config import driver as d
 
 
 class TestPage9(unittest.TestCase):
     def setUp(self) -> None:
-        self.driver = webdriver.Chrome()
+        self.driver = d
         # self.driver = webdriver.Remote(
         #     command_executor=link,
         #     desired_capabilities=capabilities)
