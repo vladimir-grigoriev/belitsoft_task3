@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'python3 -m venv env'
                 sh '. ./env/bin/activate '
-                sh 'pip install selenium'
+                sh 'sudo pip install -r requirements.txt'
             }
         }
         stage('Test') { 
