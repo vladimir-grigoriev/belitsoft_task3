@@ -10,7 +10,6 @@ pipeline {
             steps {
                 sh 'python3 -m venv env'
                 sh '. ./env/bin/activate '
-                sh 'sudo pip install -r requirements.txt'
             }
         }
         stage('Test') { 
@@ -20,7 +19,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pytest --junit-xml test-reports/results.xml tests/' 
+                sh 'python -m unittest tests/test_page2.py' 
             }
             post {
                 always {
