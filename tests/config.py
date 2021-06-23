@@ -17,9 +17,12 @@ driver_selenoid = webdriver.Remote
 driver_location = "/usr/bin/chromedriver"
 binary_location = "/usr/bin/google-chrome"
 
-options = webdriver.ChromeOptions()
-options.binary_location = binary_location
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.binary_location = binary_location
 
 driver = webdriver.Chrome(
-    executable_path=driver_location, chrome_options=options
+    executable_path=driver_location, chrome_options=chrome_options
 )
