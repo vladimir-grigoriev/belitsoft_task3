@@ -19,6 +19,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'pip install --upgrade pip'
                 sh 'pip install selenium'
                 sh 'pytest tests/test_page2.py' 
             }
