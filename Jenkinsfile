@@ -10,6 +10,9 @@ pipeline {
             steps {
                 sh 'python3 -m venv env'
                 sh '. ./env/bin/activate '
+                sh 'pip install --upgrade pip'
+                sh 'pip install selenium'
+                sh 'pip install pytest'
             }
         }
         stage('Test') { 
@@ -19,8 +22,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pip install --upgrade pip'
-                sh 'pip install selenium'
+                
                 sh 'pytest tests/test_page2.py' 
             }
             post {
