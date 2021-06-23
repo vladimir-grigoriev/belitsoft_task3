@@ -1,6 +1,5 @@
 import unittest
 
-from selenium import webdriver
 from selenium.common.exceptions import ElementClickInterceptedException
 
 from pages.page3 import Page3
@@ -10,9 +9,6 @@ from .config import driver as d
 class TestPage3(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = d
-        # self.driver = webdriver.Remote(
-        #     command_executor=link,
-        #     desired_capabilities=capabilities)
 
     def tearDown(self) -> None:
         self.driver.quit()

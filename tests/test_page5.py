@@ -1,7 +1,5 @@
 import unittest
 
-from selenium import webdriver
-
 from pages.page5 import Page5
 from .config import driver as d
 
@@ -9,9 +7,6 @@ from .config import driver as d
 class TestPage5(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = d
-        # self.driver = webdriver.Remote(
-        #     command_executor=link,
-        #     desired_capabilities=capabilities)
 
     def tearDown(self) -> None:
         self.driver.quit()
