@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python-chrome:latest'
+                    image 'python-chromedriver:latest'
                 }
             }
             steps {
