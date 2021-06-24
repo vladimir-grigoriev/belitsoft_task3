@@ -4,7 +4,8 @@
 2. Screenshots of the second task with postman and newman and the fourth task from the test challenge are attached below in the Readme.md, also they can be downloaded from img/ folder
 ___
 Last updates (June 24, 2021):
-1. Switch local test runs into "local_run" branch
+1. Switch Allure Report to branch `"run_with_allure"`
+1. Switch local test runs into `"local_run"` branch
 1. Implementation in the master branch allows you to run tests in a Docker container with Jenkins+Python+Chrome
 ___
 Last updates (June 21, 2021):
