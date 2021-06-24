@@ -1,12 +1,12 @@
 import unittest
 
 from pages.page8 import Page8
-from .config import driver as d
+from selenium import webdriver
 
 
 class TestPage8(unittest.TestCase):
     def setUp(self) -> None:
-        self.driver = d
+        self.driver = webdriver.Chrome()
 
     def tearDown(self) -> None:
         self.driver.quit()

@@ -1,14 +1,14 @@
 import unittest
 
 from selenium.common.exceptions import ElementClickInterceptedException
+from selenium import webdriver
 
 from pages.page3 import Page3
-from .config import driver as d
 
 
 class TestPage3(unittest.TestCase):
     def setUp(self) -> None:
-        self.driver = d
+        self.driver = webdriver.Chrome()
 
     def tearDown(self) -> None:
         self.driver.quit()
