@@ -9,6 +9,6 @@ capabilities = {
     }
 }
 
-link = "http://localhost:8081/wd/hub"
+link = "http://localhost:8080/wd/hub"
 driver_chrome = webdriver.Chrome
 driver_selenoid = webdriver.Remote
