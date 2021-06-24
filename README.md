@@ -1,23 +1,6 @@
-# Hometask 3
-
-1. Tests for UI Playground are located in tests/ folder
-2. Screenshots of the second task with postman and newman and the fourth task from the test challenge are attached below in the Readme.md, also they can be downloaded from img/ folder
-___
-Last updates (June 21, 2021):
-1. Added pytest-xdist and nosetests-parallel to run tests in multiprocess
-2. To run tests in multiprocess, run commands:
-```
-pytest -n auto
-```
-or
-```
-nosetests --processes=4
-```
-___
+# Hometask Allure
 ## How to install
-
-
-1. Clone the repository
+1. Clone the repository, switch to branch "run_with_allure"
 
 ```
 https://github.com/vladimir-grigoriev/belitsoft_task3.git
@@ -32,14 +15,22 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 4. Make sure, that Chrome Webdriver folder exists in your PATH
-5. Run tests with the command
+5. Install Allure https://docs.qameta.io/, add it to your PATH variable
+6. Run command to generate JSON reports in reports/ folder
 ```
-pytest tests/
+pytest -v -s --alluredir="reports" tests/
 ```
+7. Generate Allure report
+```
+allure serve path/to/reports
+```
+8. Press `<Ctrl+C>` to exit
 ___
 
-### Screenshot for Postman + Newman task
-![Test image1](imgs/Postman_with_newman.png)
+## Some screenshots of Allure Reports
+
+![Test image1](imgs/allure1.png)
 ___
-### Screenshot for Testchallenge task
-![Test image1](imgs/Testchallenges.png)
+![Test image1](imgs/allure2.png)
+___
+![Test image1](imgs/allure3.png)
